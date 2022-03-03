@@ -180,6 +180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorOpening
       objectReference: {fileID: 0}
+    - target: {fileID: 7060882670353937035, guid: 8380ea097405e45cd85c63c220dea14c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 81f3349293daf91469f7ce050b56c95b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8380ea097405e45cd85c63c220dea14c, type: 3}
 --- !u!4 &1886473013089788827 stripped
@@ -254,6 +258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorOpening (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7060882670353937035, guid: 8380ea097405e45cd85c63c220dea14c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 81f3349293daf91469f7ce050b56c95b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8380ea097405e45cd85c63c220dea14c, type: 3}
 --- !u!4 &2792024708159319190 stripped
@@ -402,6 +410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorOpening (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7060882670353937035, guid: 8380ea097405e45cd85c63c220dea14c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 81f3349293daf91469f7ce050b56c95b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8380ea097405e45cd85c63c220dea14c, type: 3}
 --- !u!4 &4942689541608188745 stripped
@@ -476,6 +488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorOpening (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7060882670353937035, guid: 8380ea097405e45cd85c63c220dea14c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 81f3349293daf91469f7ce050b56c95b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8380ea097405e45cd85c63c220dea14c, type: 3}
 --- !u!4 &5684334333271412482 stripped
@@ -616,6 +632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor
       objectReference: {fileID: 0}
+    - target: {fileID: 4353659443090433454, guid: b308d3d66975640a9b4b5806be1c3fce, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7df1799123e9a7c4eafb69dee32a0fa0, type: 2}
     - target: {fileID: 5482001975046253653, guid: b308d3d66975640a9b4b5806be1c3fce, type: 3}
       propertyPath: m_Mesh
       value: 
