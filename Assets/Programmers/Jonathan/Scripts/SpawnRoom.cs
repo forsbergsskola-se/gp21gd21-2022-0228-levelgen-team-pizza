@@ -21,8 +21,8 @@ public class SpawnRoom : MonoBehaviour
         if (other.CompareTag("Player") && !hasBeenTriggered)
         {
             var root = transform.root.GetComponent<RoomHandler>();
-            dungeonGeneratorJj.GenerateRoom(RoomDirection1, root.roomPlacementY,root.roomPlacementX );
-            dungeonGeneratorJj.GenerateRoom(RoomDirection2, root.roomPlacementY,root.roomPlacementX );
+            dungeonGeneratorJj.GenerateRoom(RoomDirection1,root.roomCoords);
+            dungeonGeneratorJj.GenerateRoom(RoomDirection2, root.roomCoords);
         }
 
         hasBeenTriggered = true;

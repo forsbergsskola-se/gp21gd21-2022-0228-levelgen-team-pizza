@@ -6,4 +6,6 @@ public class RoomHandler : MonoBehaviour
 {
     public int roomPlacementY = 0;
     public int roomPlacementX = 0;
+
+    public Vector2 roomCoords;
 }
