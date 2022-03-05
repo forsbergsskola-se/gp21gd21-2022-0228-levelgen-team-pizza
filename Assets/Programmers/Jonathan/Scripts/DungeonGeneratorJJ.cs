@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DungeonGeneratorJJ : MonoBehaviour
 {
@@ -19,9 +21,39 @@ public class DungeonGeneratorJJ : MonoBehaviour
         MazeCreator();
     }
 
-    private void GenerateRoom(RoomDirection RoomDir)
-    {
 
+
+    public void GenerateRoom(RoomDirection RoomDir, int roomPlacementY, int roomPlacementX)
+    {
+        if (RoomDir == RoomDirection.Down)
+        {
+            var roomPlacementCorrection = roomPlacementY+yPlacement++;
+            var room = Instantiate(testRoom, new Vector3(0, 0, - yPlacement*offset.y), Quaternion.identity).GetComponent<RoomHandler>();
+            room.roomPlacementY = roomPlacementCorrection;
+
+        }
+
+        if (RoomDir == RoomDirection.Up)
+        {
+            var roomPlacementCorrection = roomPlacementY+yPlacement--;
+            var room = Instantiate(testRoom, new Vector3(0, 0, - yPlacement*offset.y), Quaternion.identity).GetComponent<RoomHandler>();
+            room.roomPlacementY = roomPlacementCorrection;
+
+        }
+        if (RoomDir == RoomDirection.Right)
+        {
+            var roomPlacementCorrection = roomPlacementX+xPlacement++;
+            var room = Instantiate(testRoom, new Vector3(xPlacement*offset.x, 0, 0), Quaternion.identity).GetComponent<RoomHandler>();
+            room.roomPlacementX = roomPlacementCorrection;
+
+        }
+        if (RoomDir == RoomDirection.Left)
+        {
+            var roomPlacementCorrection = roomPlacementX+xPlacement--;
+            var room = Instantiate(testRoom, new Vector3(xPlacement*offset.x, 0, 0), Quaternion.identity).GetComponent<RoomHandler>();
+            room.roomPlacementX = roomPlacementCorrection;
+
+        }
         //ORIGINAL CODE:
         // for (var i = 0; i < gridSize.x; i++)
         // {
