@@ -12,22 +12,25 @@ public class DungeonGeneratorJJ : MonoBehaviour
     private readonly int startPos = 0;
 
     private List<Cell> grid;
-
+    private int xPlacement = 0;
+    private int yPlacement =0;
     private void Start()
     {
         MazeCreator();
     }
 
-    private void GenerateDungeon()
+    private void GenerateRoom(RoomDirection RoomDir)
     {
-        for (var i = 0; i < gridSize.x; i++)
-        {
-            for (var j = 0; j < gridSize.y; j++)
-            {
-                // Debug.Log($"i: {i} and j: {j}" );
-                Instantiate(testRoom, new Vector3(i*offset.x, 0, - j*offset.y), Quaternion.identity);
-            }
-        }
+
+        //ORIGINAL CODE:
+        // for (var i = 0; i < gridSize.x; i++)
+        // {
+        //     for (var j = 0; j < gridSize.y; j++)
+        //     {
+        //         // Debug.Log($"i: {i} and j: {j}" );
+        //         Instantiate(testRoom, new Vector3(i*offset.x, 0, - j*offset.y), Quaternion.identity);
+        //     }
+        // }
     }
 
     private void MazeCreator()
@@ -98,8 +101,9 @@ public class DungeonGeneratorJJ : MonoBehaviour
                 }
             }
         }
+        //Create start room - should be integrated better but temp placement is here
+        Instantiate(testRoom, new Vector3(xPlacement*offset.x, 0, - yPlacement*offset.y), Quaternion.identity);
 
-        GenerateDungeon();
     }
 
     private List<int> CheckNeighbours(int cell) // LIST<INT> = NEIGHBOURS INT
