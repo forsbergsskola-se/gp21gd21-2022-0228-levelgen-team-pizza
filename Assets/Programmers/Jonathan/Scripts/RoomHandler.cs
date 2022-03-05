@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///     Atm, just contains its own corrdinates
+/// </summary>
 public class RoomHandler : MonoBehaviour
 {
-    public int roomPlacementY = 0;
-    public int roomPlacementX = 0;
-
     public Vector2 roomCoords;
 }

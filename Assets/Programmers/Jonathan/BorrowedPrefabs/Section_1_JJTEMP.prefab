@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomPlacementY: 0
   roomPlacementX: 0
+  roomCoords: {x: 0, y: 0}
 --- !u!1 &5889144895771772099
 GameObject:
   m_ObjectHideFlags: 0
