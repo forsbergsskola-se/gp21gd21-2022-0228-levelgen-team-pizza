@@ -57,9 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonGeneratorJj: {fileID: 0}
-  RoomDirection1: 0
-  RoomDirection2: 3
+  roomDirections: 0000000003000000
 --- !u!1 &3768286440962521795
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,8 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de19ceff50a1654492d32e7bbcaba95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomPlacementY: 0
-  roomPlacementX: 0
   roomCoords: {x: 0, y: 0}
 --- !u!1 &5889144895771772099
 GameObject:
@@ -170,9 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonGeneratorJj: {fileID: 0}
-  RoomDirection1: 0
-  RoomDirection2: 2
+  roomDirections: 0000000002000000
 --- !u!1 &6036894572322723286
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,9 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonGeneratorJj: {fileID: 0}
-  RoomDirection1: 1
-  RoomDirection2: 3
+  roomDirections: 0100000003000000
 --- !u!1 &6635498859669790132
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,9 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonGeneratorJj: {fileID: 0}
-  RoomDirection1: 1
-  RoomDirection2: 2
+  roomDirections: 0100000002000000
 --- !u!1001 &1813562175295827468
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 ///     Atm, just contains its own corrdinates
 /// </summary>
-public class RoomHandler : MonoBehaviour
+public class RoomHandlerJJ : MonoBehaviour
 {
-    public Vector2 roomCoords;
+    [HideInInspector]public Vector2 roomCoords;
 }
