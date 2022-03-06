@@ -2,17 +2,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Handles spawning of rooms when player enter room spawning trigger
-public class SpawnRoomJJ : MonoBehaviour
+public class SpawnRoom : MonoBehaviour
 {
     [SerializeField]
     private List<RoomDirection> roomDirections = new List<RoomDirection>();
 
-    private DungeonGeneratorJJ dungeonGeneratorJj;
+    private DungeonGenerator m_DungeonGenerator;
     private bool hasBeenTriggered;
 
     private void Start()
     {
-        dungeonGeneratorJj = FindObjectOfType<DungeonGeneratorJJ>(); //Lazy implementation but think it will do for this occasion. Or maybe change later
+        m_DungeonGenerator = FindObjectOfType<DungeonGenerator>(); //Lazy implementation but think it will do for this occasion. Or maybe change later
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,11 +20,11 @@ public class SpawnRoomJJ : MonoBehaviour
         //If player enter zone close to a non-existing room --> spawn room
         if (other.CompareTag("Player") && !hasBeenTriggered)
         {
-            var root = transform.root.GetComponent<RoomHandlerJJ>(); // get room handler for coords
+            var root = transform.root.GetComponent<RoomHandler>(); // get room handler for coords
 
             foreach (var roomDirection in roomDirections) // foreach room dir to spawn
             {
-                dungeonGeneratorJj.GenerateRoom(roomDirection, root.roomCoords); // spawn room
+                m_DungeonGenerator.GenerateRoom(roomDirection, root.roomCoords); // spawn room
             }
         }
 
