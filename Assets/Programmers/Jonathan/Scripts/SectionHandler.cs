@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 /// <summary>
@@ -6,25 +5,25 @@ using UnityEngine;
 /// </summary>
 public class SectionHandler : MonoBehaviour
 {
-    private DungeonGenerator dungeonGenerator => FindObjectOfType<DungeonGenerator>();
-    private Transform player => GameObject.FindGameObjectWithTag("Player").transform;
-    [HideInInspector]public Vector2 sectionCoords;
+    [HideInInspector]
+    public Vector2 SectionCoords;
 
     [SerializeField]
     private float roomDestroyDistance = 250f; // Distance from pivot until rooms are destroyed
+
+    private DungeonGenerator dungeonGenerator => FindObjectOfType<DungeonGenerator>();
+    private Transform player => GameObject.FindGameObjectWithTag("Player").transform;
 
     private void Update()
     {
         if (Vector3.Distance(transform.position, player.position) > roomDestroyDistance)
         {
-           Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
     private void OnDestroy()
     {
-        Debug.Log($"Room Destroyed at coords {sectionCoords}");
-        dungeonGenerator.occupiedSpots.Remove(sectionCoords);
-
+        dungeonGenerator.occupiedSpots.Remove(SectionCoords);
     }
 }

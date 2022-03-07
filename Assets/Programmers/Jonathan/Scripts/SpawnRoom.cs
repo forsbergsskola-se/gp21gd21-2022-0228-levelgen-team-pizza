@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnRoom : MonoBehaviour
 {
     [SerializeField]
-    private List<sectionDirection> roomDirections = new List<sectionDirection>();
+    private List<sectionDirection> sectionDirections = new List<sectionDirection>();
 
     private DungeonGenerator m_DungeonGenerator;
     private bool hasBeenTriggered;
@@ -22,14 +22,14 @@ public class SpawnRoom : MonoBehaviour
         {
             var parent = transform.parent.parent.GetComponent<SectionHandler>(); // get room handler for coords
 
-            foreach (var roomDirection in roomDirections) // foreach room dir to spawn
+            foreach (var sectionDirection in sectionDirections) // foreach room dir to spawn
             {
-                m_DungeonGenerator.GenerateSection(roomDirection, parent.sectionCoords); // spawn room
+                m_DungeonGenerator.GenerateSection(sectionDirection, parent.SectionCoords); // spawn room
             }
         }
 
         // // dont allow the spawner to trigger more than once. Optimization, since it would not anyways since checking position before spawn,
         // // but now we save a search in list of coords.
-        hasBeenTriggered = true;
+        // hasBeenTriggered = true;
     }
 }

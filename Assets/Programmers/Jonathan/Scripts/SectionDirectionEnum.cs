@@ -1,4 +1,4 @@
-//Enum keeping track of directions of rooms
+//Enum keeping track of directions of sections
 public enum sectionDirection
 {
     Up,

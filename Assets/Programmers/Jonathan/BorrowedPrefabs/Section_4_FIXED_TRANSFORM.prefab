@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de19ceff50a1654492d32e7bbcaba95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sectionCoords: {x: 0, y: 0}
+  SectionCoords: {x: 0, y: 0}
+  roomDestroyDistance: 250
 --- !u!1 &3799986060609983673
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomDirections: 0100000003000000
+  sectionDirections: 0100000003000000
 --- !u!1 &4724862322038539804
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomDirections: 0000000003000000
+  sectionDirections: 0000000003000000
 --- !u!1 &5780545624104359041
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomDirections: 0000000002000000
+  sectionDirections: 0000000002000000
 --- !u!1 &7767376096690143320
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomDirections: 0100000002000000
+  sectionDirections: 0100000002000000
 --- !u!1001 &617214412913191833
 PrefabInstance:
   m_ObjectHideFlags: 0
