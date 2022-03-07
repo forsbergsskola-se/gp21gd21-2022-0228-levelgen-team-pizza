@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -6,4 +7,11 @@ using UnityEngine;
 public class SectionHandler : MonoBehaviour
 {
     [HideInInspector]public Vector2 roomCoords;
+
+    private void OnDestroy()
+    {
+
+
+
+    }
 }
