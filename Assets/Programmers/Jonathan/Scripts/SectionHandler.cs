@@ -1,9 +1,9 @@
 using UnityEngine;
 
 /// <summary>
-///     Atm, just contains its own corrdinates
+///     Atm, just contains its own coordinates
 /// </summary>
-public class RoomHandler : MonoBehaviour
+public class SectionHandler : MonoBehaviour
 {
     [HideInInspector]public Vector2 roomCoords;
 }

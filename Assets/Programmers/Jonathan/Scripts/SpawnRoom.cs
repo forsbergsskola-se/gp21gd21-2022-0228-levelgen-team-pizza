@@ -20,7 +20,7 @@ public class SpawnRoom : MonoBehaviour
         //If player enter zone close to a non-existing room --> spawn room
         if (other.CompareTag("Player") && !hasBeenTriggered)
         {
-            var root = transform.root.GetComponent<RoomHandler>(); // get room handler for coords
+            var root = transform.root.GetComponent<SectionHandler>(); // get room handler for coords
 
             foreach (var roomDirection in roomDirections) // foreach room dir to spawn
             {

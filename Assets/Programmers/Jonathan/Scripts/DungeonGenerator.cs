@@ -24,19 +24,19 @@ public class DungeonGenerator : MonoBehaviour
 
     private void Start()
     {
-        var startRoom = Instantiate(this.startRoom, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<RoomHandler>(); // spawn start room at 0,0,0
+        var startRoom = Instantiate(this.startRoom, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<SectionHandler>(); // spawn start room at 0,0,0
         OccupiedSpots.Add(new Vector2(startRoom.roomCoords.x,startRoom.roomCoords.y));
     }
 
-    public void GenerateRoom(RoomDirection RoomDir, Vector2 roomCoords)
+    public void GenerateRoom(RoomDirection roomDir, Vector2 roomCoords)
     {
 
-        if (RoomDir == RoomDirection.Down)
+        if (roomDir == RoomDirection.Down)
         {
             if (!OccupiedSpots.Contains(new Vector2(roomCoords.x, roomCoords.y + 1))) // if there is no room in the next spot to spawn in
             {
                 //spawn room
-                var room = Instantiate(downRooms[Random.Range(0,downRooms.Count)], new Vector3(roomCoords.x*offset.x, 0, -(roomCoords.y + 1)*offset.y), Quaternion.identity).GetComponent<RoomHandler>();
+                var room = Instantiate(downRooms[Random.Range(0,downRooms.Count)], new Vector3(roomCoords.x*offset.x, 0, -(roomCoords.y + 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 //update room cords on room
                 room.roomCoords = new Vector2(roomCoords.x, roomCoords.y + 1);
                 //Add the new spot to the occupied spots list
@@ -49,11 +49,11 @@ public class DungeonGenerator : MonoBehaviour
             }
         }
 
-        if (RoomDir == RoomDirection.Up)
+        if (roomDir == RoomDirection.Up)
         {
             if (!OccupiedSpots.Contains(new Vector2(roomCoords.x, roomCoords.y - 1)))
             {
-                var room = Instantiate(upRooms[Random.Range(0,upRooms.Count)], new Vector3(roomCoords.x*offset.x, 0, -(roomCoords.y - 1)*offset.y), Quaternion.identity).GetComponent<RoomHandler>();
+                var room = Instantiate(upRooms[Random.Range(0,upRooms.Count)], new Vector3(roomCoords.x*offset.x, 0, -(roomCoords.y - 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 room.roomCoords = new Vector2(roomCoords.x, roomCoords.y - 1);
                 OccupiedSpots.Add(new Vector2(roomCoords.x, roomCoords.y - 1));
             }
@@ -63,11 +63,11 @@ public class DungeonGenerator : MonoBehaviour
             }
         }
 
-        if (RoomDir == RoomDirection.Right)
+        if (roomDir == RoomDirection.Right)
         {
             if (!OccupiedSpots.Contains(new Vector2(roomCoords.x + 1, roomCoords.y)))
             {
-                var room = Instantiate(rightRooms[Random.Range(0,rightRooms.Count)], new Vector3((roomCoords.x + 1)*offset.x, 0, -roomCoords.y*offset.y), Quaternion.identity).GetComponent<RoomHandler>();
+                var room = Instantiate(rightRooms[Random.Range(0,rightRooms.Count)], new Vector3((roomCoords.x + 1)*offset.x, 0, -roomCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 room.roomCoords = new Vector2(roomCoords.x + 1, roomCoords.y);
                 OccupiedSpots.Add(new Vector2(roomCoords.x + 1, roomCoords.y));
             }
@@ -77,11 +77,11 @@ public class DungeonGenerator : MonoBehaviour
             }
         }
 
-        if (RoomDir == RoomDirection.Left)
+        if (roomDir == RoomDirection.Left)
         {
             if (!OccupiedSpots.Contains(new Vector2(roomCoords.x - 1, roomCoords.y)))
             {
-                var room = Instantiate(leftRooms[Random.Range(0,leftRooms.Count)], new Vector3((roomCoords.x - 1)*offset.x, 0, -roomCoords.y*offset.y), Quaternion.identity).GetComponent<RoomHandler>();
+                var room = Instantiate(leftRooms[Random.Range(0,leftRooms.Count)], new Vector3((roomCoords.x - 1)*offset.x, 0, -roomCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 room.roomCoords = new Vector2(roomCoords.x - 1, roomCoords.y);
                 OccupiedSpots.Add(new Vector2(roomCoords.x - 1, roomCoords.y));
             }
