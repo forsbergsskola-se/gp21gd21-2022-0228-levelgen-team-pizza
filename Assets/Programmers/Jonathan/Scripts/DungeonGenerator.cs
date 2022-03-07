@@ -10,88 +10,75 @@ public class DungeonGenerator : MonoBehaviour
     private GameObject startRoom;
 
     [SerializeField]
-    private List<GameObject> upRooms = new List<GameObject>();
+    private List<GameObject> upSections = new List<GameObject>();
     [SerializeField]
-    private List<GameObject> downRooms = new List<GameObject>();
+    private List<GameObject> downSections = new List<GameObject>();
     [SerializeField]
-    private List<GameObject> leftRooms = new List<GameObject>();
+    private List<GameObject> leftSections = new List<GameObject>();
     [SerializeField]
-    private List<GameObject> rightRooms = new List<GameObject>();
+    private List<GameObject> rightSections = new List<GameObject>();
     public Vector2 offset;
 
 
-    private readonly List<Vector2> occupiedSpots = new List<Vector2>();
+    public  List<Vector2> occupiedSpots = new List<Vector2>();
 
     private void Start()
     {
-        var startRoom = Instantiate(this.startRoom, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<SectionHandler>(); // spawn start room at 0,0,0
-        occupiedSpots.Add(new Vector2(startRoom.roomCoords.x,startRoom.roomCoords.y));
+        var startSection = Instantiate(this.startRoom, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<SectionHandler>(); // spawn start room at 0,0,0
+        occupiedSpots.Add(new Vector2(startSection.sectionCoords.x,startSection.sectionCoords.y));
     }
 
-    public void GenerateRoom(RoomDirection roomDir, Vector2 roomCoords)
+    public void GenerateSection(sectionDirection sectionDir, Vector2 sectionCoords)
     {
 
-        if (roomDir == RoomDirection.Down)
+        if (sectionDir == sectionDirection.Down)
         {
-            if (!occupiedSpots.Contains(new Vector2(roomCoords.x, roomCoords.y + 1))) // if there is no room in the next spot to spawn in
+            if (!occupiedSpots.Contains(new Vector2(sectionCoords.x, sectionCoords.y + 1))) // if there is no room in the next spot to spawn in
             {
                 //spawn room
-                var room = Instantiate(downRooms[Random.Range(0,downRooms.Count)], new Vector3(roomCoords.x*offset.x, 0, -(roomCoords.y + 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                var section = Instantiate(downSections[Random.Range(0,downSections.Count)], new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y + 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                section.transform.parent = transform;
+
+                //TODO: Section rotate 0-90-180-270 degrees.
+
                 //update room cords on room
-                room.roomCoords = new Vector2(roomCoords.x, roomCoords.y + 1);
+                section.sectionCoords = new Vector2(sectionCoords.x, sectionCoords.y + 1);
                 //Add the new spot to the occupied spots list
-                occupiedSpots.Add(new Vector2(roomCoords.x, roomCoords.y + 1));
-            }
-            //TODO: REMOVE DEBUG STATEMENTS
-            else
-            {
-                Debug.Log("Spot taken");
+                occupiedSpots.Add(new Vector2(sectionCoords.x, sectionCoords.y + 1));
             }
         }
 
-        if (roomDir == RoomDirection.Up)
+        if (sectionDir == sectionDirection.Up)
         {
-            if (!occupiedSpots.Contains(new Vector2(roomCoords.x, roomCoords.y - 1)))
+            if (!occupiedSpots.Contains(new Vector2(sectionCoords.x, sectionCoords.y - 1)))
             {
-                var room = Instantiate(upRooms[Random.Range(0,upRooms.Count)], new Vector3(roomCoords.x*offset.x, 0, -(roomCoords.y - 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                room.roomCoords = new Vector2(roomCoords.x, roomCoords.y - 1);
-                occupiedSpots.Add(new Vector2(roomCoords.x, roomCoords.y - 1));
-            }
-            else
-            {
-                Debug.Log("Spot taken");
+                var section = Instantiate(upSections[Random.Range(0,upSections.Count)], new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y - 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                section.transform.parent = transform;
+                section.sectionCoords = new Vector2(sectionCoords.x, sectionCoords.y - 1);
+                occupiedSpots.Add(new Vector2(sectionCoords.x, sectionCoords.y - 1));
             }
         }
 
-        if (roomDir == RoomDirection.Right)
+        if (sectionDir == sectionDirection.Right)
         {
-            if (!occupiedSpots.Contains(new Vector2(roomCoords.x + 1, roomCoords.y)))
+            if (!occupiedSpots.Contains(new Vector2(sectionCoords.x + 1, sectionCoords.y)))
             {
-                var room = Instantiate(rightRooms[Random.Range(0,rightRooms.Count)], new Vector3((roomCoords.x + 1)*offset.x, 0, -roomCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                room.roomCoords = new Vector2(roomCoords.x + 1, roomCoords.y);
-                occupiedSpots.Add(new Vector2(roomCoords.x + 1, roomCoords.y));
-            }
-            else
-            {
-                Debug.Log("Spot taken");
+                var section = Instantiate(rightSections[Random.Range(0,rightSections.Count)], new Vector3((sectionCoords.x + 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                section.transform.parent = transform;
+                section.sectionCoords = new Vector2(sectionCoords.x + 1, sectionCoords.y);
+                occupiedSpots.Add(new Vector2(sectionCoords.x + 1, sectionCoords.y));
             }
         }
 
-        if (roomDir == RoomDirection.Left)
+        if (sectionDir == sectionDirection.Left)
         {
-            if (!occupiedSpots.Contains(new Vector2(roomCoords.x - 1, roomCoords.y)))
+            if (!occupiedSpots.Contains(new Vector2(sectionCoords.x - 1, sectionCoords.y)))
             {
-                var room = Instantiate(leftRooms[Random.Range(0,leftRooms.Count)], new Vector3((roomCoords.x - 1)*offset.x, 0, -roomCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                room.roomCoords = new Vector2(roomCoords.x - 1, roomCoords.y);
-                occupiedSpots.Add(new Vector2(roomCoords.x - 1, roomCoords.y));
-            }
-            else
-            {
-                Debug.Log("Spot taken");
+                var section = Instantiate(leftSections[Random.Range(0,leftSections.Count)], new Vector3((sectionCoords.x - 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                section.transform.parent = transform;
+                section.sectionCoords = new Vector2(sectionCoords.x - 1, sectionCoords.y);
+                occupiedSpots.Add(new Vector2(sectionCoords.x - 1, sectionCoords.y));
             }
         }
-
-
     }
-
 }

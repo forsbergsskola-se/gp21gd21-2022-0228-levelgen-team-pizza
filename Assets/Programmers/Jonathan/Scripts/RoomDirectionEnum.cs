@@ -1,5 +1,5 @@
 //Enum keeping track of directions of rooms
-public enum RoomDirection
+public enum sectionDirection
 {
     Up,
     Down,
