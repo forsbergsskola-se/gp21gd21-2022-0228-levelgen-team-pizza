@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8706380888859501595}
   - component: {fileID: 1339689372266475585}
   m_Layer: 0
-  m_Name: U Detector
+  m_Name: R Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sectionDirections: 00000000
+  sectionDirections: 03000000
 --- !u!1 &925278706081318989
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 3060635968519049829}
   - component: {fileID: 1484028288880978379}
   m_Layer: 0
-  m_Name: R Detector
+  m_Name: D Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sectionDirections: 03000000
+  sectionDirections: 01000000
 --- !u!1 &3834541979190964152
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 6054733480709334226}
   - component: {fileID: 2783087349760714333}
   m_Layer: 0
-  m_Name: L Detector
+  m_Name: U Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sectionDirections: 02000000
+  sectionDirections: 00000000
 --- !u!1 &3874455729412826858
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 6541861192217949725}
   - component: {fileID: 2801718598581528248}
   m_Layer: 0
-  m_Name: D Detector
+  m_Name: L Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0434e97e964064d9e005b72e18c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sectionDirections: 01000000
+  sectionDirections: 02000000
 --- !u!1 &6219452002041893827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,6 +2441,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1566383845692121852, guid: 7506cdf01185f42fa9e08b27ad4238cb, type: 3}
   m_PrefabInstance: {fileID: 4295872012053266512}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5665595686151118966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8448257673316507686, guid: 7506cdf01185f42fa9e08b27ad4238cb, type: 3}
+  m_PrefabInstance: {fileID: 4295872012053266512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5365575161864643965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665595686151118966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de19ceff50a1654492d32e7bbcaba95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SectionCoords: {x: 0, y: 0}
+  roomDestroyDistance: 250
 --- !u!1001 &4947144449129395419
 PrefabInstance:
   m_ObjectHideFlags: 0
