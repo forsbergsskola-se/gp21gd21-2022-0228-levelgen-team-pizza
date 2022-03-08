@@ -41,10 +41,11 @@ public class DungeonGenerator : MonoBehaviour
         {
             if (!occupiedSpots.Contains(new Vector2(sectionCoords.x, sectionCoords.y + 1))) // if there is no room in the next spot to spawn in
             {
+                Debug.Log(sectionCoords);
+
                 //spawn room
                 var section = Instantiate(downSections[Random.Range(0,downSections.Count)], new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y + 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                section.transform.parent = transform;
-                // SetRandomRotationOfSection(section);
+                SetRandomRotationOfSection(section);
                 //update room cords on room
                 section.SectionCoords = new Vector2(sectionCoords.x, sectionCoords.y + 1);
                 //Add the new spot to the occupied spots list
@@ -57,8 +58,7 @@ public class DungeonGenerator : MonoBehaviour
             if (!occupiedSpots.Contains(new Vector2(sectionCoords.x, sectionCoords.y - 1)))
             {
                 var section = Instantiate(upSections[Random.Range(0,upSections.Count)], new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y - 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                section.transform.parent = transform;
-                // SetRandomRotationOfSection(section);
+                SetRandomRotationOfSection(section);
 
                 section.SectionCoords = new Vector2(sectionCoords.x, sectionCoords.y - 1);
                 occupiedSpots.Add(new Vector2(sectionCoords.x, sectionCoords.y - 1));
@@ -70,8 +70,7 @@ public class DungeonGenerator : MonoBehaviour
             if (!occupiedSpots.Contains(new Vector2(sectionCoords.x + 1, sectionCoords.y)))
             {
                 var section = Instantiate(rightSections[Random.Range(0,rightSections.Count)], new Vector3((sectionCoords.x + 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                section.transform.parent = transform;
-                // SetRandomRotationOfSection(section);
+                SetRandomRotationOfSection(section);
 
                 section.SectionCoords = new Vector2(sectionCoords.x + 1, sectionCoords.y);
                 occupiedSpots.Add(new Vector2(sectionCoords.x + 1, sectionCoords.y));
@@ -83,8 +82,7 @@ public class DungeonGenerator : MonoBehaviour
             if (!occupiedSpots.Contains(new Vector2(sectionCoords.x - 1, sectionCoords.y)))
             {
                 var section = Instantiate(leftSections[Random.Range(0,leftSections.Count)], new Vector3((sectionCoords.x - 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                section.transform.parent = transform;
-                // SetRandomRotationOfSection(section);
+                SetRandomRotationOfSection(section);
 
                 section.SectionCoords = new Vector2(sectionCoords.x - 1, sectionCoords.y);
                 occupiedSpots.Add(new Vector2(sectionCoords.x - 1, sectionCoords.y));
@@ -93,7 +91,7 @@ public class DungeonGenerator : MonoBehaviour
     }
     private void SetRandomRotationOfSection(SectionHandler section)
     {
-        int randomRot = sectionRotation[Random.Range(0, sectionRotation.Length)];
-        section.transform.localRotation = Quaternion.Euler(0, randomRot, 0);
+        // int randomRot = sectionRotation[Random.Range(0, sectionRotation.Length)];
+        // section.transform.rotation = Quaternion.Euler(0, randomRot, 0);
     }
 }
