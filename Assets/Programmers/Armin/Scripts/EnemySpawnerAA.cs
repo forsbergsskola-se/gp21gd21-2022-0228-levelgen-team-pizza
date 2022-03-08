@@ -4,37 +4,52 @@ using UnityEngine;
 
 public class EnemySpawnerAA : MonoBehaviour
 {
-    public GameObject[] enemies;
-    public Vector3 spawnValues;
-    public float spawnWait;
-    public float spawnMostWait;
-    public float spawnLeastWait;
-    public int startWait;
-    public bool stop;
+    [SerializeField]
+    private Transform[] spawnZones;
 
-    private int m_RandEnemy;
+    [SerializeField]
+    private GameObject[] enemies;
+    private int spawnNum;
+    private int enemyNum;
+    private GameObject enemy;
+    private Transform enemySpawn;
 
-    private void Start() {
-        StartCoroutine(WaitSpawner());
+    private void Awake()
+    {
+        enemies[0].SetActive(false);
+        enemies[1].SetActive(false);
+        enemies[2].SetActive(false);
     }
 
-    private void Update() {
-        spawnWait = Random.Range(spawnMostWait, spawnMostWait);
+    private void Start()
+    {
+        spawnNum = Random.Range(0, spawnZones.Length);
+        enemyNum = Random.Range(0, enemies.Length);
+
+        enemy = enemies[enemyNum];
+        enemySpawn = spawnZones[spawnNum];
+
+        enemy.transform.position = enemySpawn.transform.position;
+        enemy.SetActive(true);
+
     }
 
-    IEnumerator WaitSpawner() {
-        yield
-            return new WaitForSeconds(startWait);
+    private void Update()
+    {
+        StartCoroutine(EnemyChange());
+    }
 
-        while (!stop) {
-            m_RandEnemy = Random.Range(0, 2);
+    IEnumerator EnemyChange()
+    {
 
-            var spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 1f, Random.Range(-spawnValues.z, spawnValues.z));
+        yield return new WaitForSeconds(3); 
+        enemy.SetActive(false);
+        spawnNum = Random.Range(0, spawnZones.Length);
+        enemyNum = Random.Range(0, enemies.Length);
+        enemy = enemies[enemyNum];
+        enemySpawn = spawnZones[spawnNum];
 
-            Instantiate(enemies[m_RandEnemy], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
-
-            yield
-                return new WaitForSeconds(spawnWait);
-        }
+        enemy.transform.position = enemySpawn.transform.position;
+        enemy.SetActive(true);
     }
 }
