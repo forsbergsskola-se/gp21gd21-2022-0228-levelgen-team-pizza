@@ -25,5 +25,6 @@ public class SectionHandler : MonoBehaviour
     private void OnDestroy()
     {
         dungeonGenerator.occupiedSpots.Remove(SectionCoords);
+
     }
 }

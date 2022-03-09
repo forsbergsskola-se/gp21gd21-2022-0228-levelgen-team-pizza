@@ -1,5 +1,8 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public class DungeonGenerator : MonoBehaviour
@@ -21,23 +24,18 @@ public class DungeonGenerator : MonoBehaviour
 
     public Vector2 offset;
 
-    private int[] sectionRotation = {
-        0,
-        90,
-        180,
-        270
-    };
+    private List<NavMeshSurface> sectionNavMeshSurface = new List<NavMeshSurface>();
 
     public  List<Vector2> occupiedSpots = new List<Vector2>();
 
     private void Start()
     {
         var startSection = Instantiate(this.startSection, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<SectionHandler>(); // spawn start room at 0,0,0
+        sectionNavMeshSurface.Add(startSection.transform.GetChild(0).GetComponent<NavMeshSurface>());
+        StartCoroutine(BakeNavMesh());
         occupiedSpots.Add(new Vector2(startSection.SectionCoords.x,startSection.SectionCoords.y));
     }
 
-
-    //TODO: Rotation of rooms seem to work, but the pivot needs to be set to center before implementation.
 
     public void GenerateSection(sectionDirection sectionDir, Vector2 sectionCoords)
     {
@@ -48,7 +46,10 @@ public class DungeonGenerator : MonoBehaviour
                 //spawn room
                 // var section = Instantiate(downSections[Random.Range(0,downSections.Count)], new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y + 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 var section = Instantiate(sectionTable.PickGO(), new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y + 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                SetRandomRotationOfSection(section);
+                //TODO: // roomFloors.Add(section.floorSurface);
+
+                sectionNavMeshSurface.Add(section.transform.GetChild(0).GetComponent<NavMeshSurface>());
+                StartCoroutine(BakeNavMesh());
                 //update room cords on room
                 section.SectionCoords = new Vector2(sectionCoords.x, sectionCoords.y + 1);
                 //Add the new spot to the occupied spots list
@@ -62,8 +63,9 @@ public class DungeonGenerator : MonoBehaviour
             {
                 var section = Instantiate(sectionTable.PickGO(), new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y - 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 // var section = Instantiate(upSections[Random.Range(0,upSections.Count)], new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y - 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                SetRandomRotationOfSection(section);
+                sectionNavMeshSurface.Add(section.transform.GetChild(0).GetComponent<NavMeshSurface>());
 
+                StartCoroutine(BakeNavMesh());
                 section.SectionCoords = new Vector2(sectionCoords.x, sectionCoords.y - 1);
                 occupiedSpots.Add(new Vector2(sectionCoords.x, sectionCoords.y - 1));
             }
@@ -75,8 +77,9 @@ public class DungeonGenerator : MonoBehaviour
             {
                 var section = Instantiate(sectionTable.PickGO(), new Vector3((sectionCoords.x + 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 // var section = Instantiate(rightSections[Random.Range(0,rightSections.Count)], new Vector3((sectionCoords.x + 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                SetRandomRotationOfSection(section);
-
+                sectionNavMeshSurface.Add(section.transform.GetChild(0).GetComponent<NavMeshSurface>());
+                StartCoroutine(BakeNavMesh());
+                // BakeNavMesh(section.transform.GetChild(0).GetComponent<NavMeshSurface>());
                 section.SectionCoords = new Vector2(sectionCoords.x + 1, sectionCoords.y);
                 occupiedSpots.Add(new Vector2(sectionCoords.x + 1, sectionCoords.y));
             }
@@ -88,17 +91,30 @@ public class DungeonGenerator : MonoBehaviour
             {
                 var section = Instantiate(sectionTable.PickGO(), new Vector3((sectionCoords.x - 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 // var section = Instantiate(leftSections[Random.Range(0,leftSections.Count)], new Vector3((sectionCoords.x - 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
-                SetRandomRotationOfSection(section);
-
+                sectionNavMeshSurface.Add(section.transform.GetChild(0).GetComponent<NavMeshSurface>());
+                StartCoroutine(BakeNavMesh());
+                // BakeNavMesh(section.transform.GetChild(0).GetComponent<NavMeshSurface>());
                 section.SectionCoords = new Vector2(sectionCoords.x - 1, sectionCoords.y);
                 occupiedSpots.Add(new Vector2(sectionCoords.x - 1, sectionCoords.y));
             }
         }
     }
-    private void SetRandomRotationOfSection(SectionHandler section)
-    {
-        // Vector3 pivot = section.transform.position + new Vector3(50.4f, 0, 50.4f);
-        // section.transform.RotateAround(pivot, Vector3.up, 90);
-        // section.transform.GetChild(0).eulerAngles = new Vector3(0, 90, 0);
-    }
+
+   IEnumerator BakeNavMesh()
+   {
+
+        foreach (var navMeshSurface in sectionNavMeshSurface)
+        {
+            if (navMeshSurface != null)
+            {
+                // yield return new WaitForSeconds(1.5f);
+
+                navMeshSurface.BuildNavMesh();
+
+                break;
+            }
+        }
+
+        yield return null;
+   }
 }
