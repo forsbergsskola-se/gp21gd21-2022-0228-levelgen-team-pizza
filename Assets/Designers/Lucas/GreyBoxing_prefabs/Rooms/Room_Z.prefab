@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3103975064985430448}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -9.49, y: -0.93, z: -36.18}
+  m_LocalPosition: {x: -9.32, y: -0.93, z: -36.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4595170825334270900}
@@ -117,7 +117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7912469197600262864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.86, y: -4.39, z: -30.310966}
+  m_LocalPosition: {x: -18.86, y: -4.39, z: -45.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4595170825334270900}
@@ -137,7 +137,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weightedGoTable: {fileID: 11400000, guid: 992793dbc7eedae44953417a1e4dda10, type: 2}
   radius: 5
-  numberOfGameObjects: 3
+  numberOfGameObjects: 1
+--- !u!1 &8240461802879871509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4173946492931070420}
+  - component: {fileID: 1470530355363453899}
+  m_Layer: 0
+  m_Name: EnemySpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4173946492931070420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8240461802879871509}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.17, y: -4.39, z: -13.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4595170825334270900}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1470530355363453899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8240461802879871509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee0f76c5f8bd4049b2b8eec23cfb9cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weightedGoTable: {fileID: 11400000, guid: 992793dbc7eedae44953417a1e4dda10, type: 2}
+  radius: 5
+  numberOfGameObjects: 1
 --- !u!1001 &100916014615697994
 PrefabInstance:
   m_ObjectHideFlags: 0
