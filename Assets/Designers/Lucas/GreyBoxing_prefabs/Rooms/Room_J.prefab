@@ -46,6 +46,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 992793dbc7eedae44953417a1e4dda10, type: 2}
   radius: 5
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &6559783712430634137
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6559783712430634137}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -6.31, y: -5.59, z: -9.59}
+  m_LocalPosition: {x: -6.31, y: -6.38, z: -9.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2790755013573788040}
@@ -92,6 +94,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &8061484174793026110
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8061484174793026110}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 29.28, y: -5.59, z: 30.07}
+  m_LocalPosition: {x: 29.28, y: -6.38, z: 30.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2790755013573788040}
@@ -138,6 +142,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &8608760669399181562
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8608760669399181562}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -6.3, y: -5.59, z: 46.8}
+  m_LocalPosition: {x: -6.3, y: -6.38, z: 46.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2790755013573788040}
@@ -184,6 +190,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1001 &296906944689348063
 PrefabInstance:
   m_ObjectHideFlags: 0

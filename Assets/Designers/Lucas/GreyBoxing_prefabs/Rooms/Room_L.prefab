@@ -46,6 +46,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 992793dbc7eedae44953417a1e4dda10, type: 2}
   radius: 5
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &5138574604406705077
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5138574604406705077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.69, y: -2.7, z: -43.4}
+  m_LocalPosition: {x: 26.69, y: -6.25, z: -43.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 454176278556365196}
@@ -92,6 +94,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &5599453342269838618
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +142,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 992793dbc7eedae44953417a1e4dda10, type: 2}
   radius: 5
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &6589649408583936469
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6589649408583936469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.92, y: -2.7, z: -42.64}
+  m_LocalPosition: {x: 1.92, y: -6.25, z: -42.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 454176278556365196}
@@ -184,6 +190,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &7846411408275880645
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7846411408275880645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.92, y: -2.7, z: -50.15}
+  m_LocalPosition: {x: -6.92, y: -6.25, z: -50.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 454176278556365196}
@@ -230,6 +238,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &9029449003815744438
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9029449003815744438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.7, z: -21.5}
+  m_LocalPosition: {x: 0, y: -6.25, z: -21.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 454176278556365196}
@@ -276,6 +286,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1001 &35157603543309144
 PrefabInstance:
   m_ObjectHideFlags: 0
