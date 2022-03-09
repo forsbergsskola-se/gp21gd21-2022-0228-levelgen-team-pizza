@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class SimpleMove : MonoBehaviour
 {
-   [SerializeField] float speed = 5.0f;
+   [SerializeField] float speed = 15.0f;
     // Start is called before the first frame update
-    void Start()
-    {
-        speed = 5.0f;
-    }
+
 
     // Update is called once per frame
     void Update()

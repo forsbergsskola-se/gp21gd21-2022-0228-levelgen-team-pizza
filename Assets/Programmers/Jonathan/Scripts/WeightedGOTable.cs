@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[CreateAssetMenu(fileName = "Weighted GO", menuName = "Weighted/GOs")]
+[CreateAssetMenu(fileName = "Object table", menuName = "Object Table/Object table")]
 public class WeightedGOTable : ScriptableObject
 {
     public string GoTableName;
