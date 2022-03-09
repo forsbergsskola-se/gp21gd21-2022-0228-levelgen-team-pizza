@@ -91,7 +91,8 @@ public class DungeonGenerator : MonoBehaviour
     }
     private void SetRandomRotationOfSection(SectionHandler section)
     {
-        // int randomRot = sectionRotation[Random.Range(0, sectionRotation.Length)];
-        // section.transform.rotation = Quaternion.Euler(0, randomRot, 0);
+        // Vector3 pivot = section.transform.position + new Vector3(50.4f, 0, 50.4f);
+        // section.transform.RotateAround(pivot, Vector3.up, 90);
+        // section.transform.GetChild(0).eulerAngles = new Vector3(0, 90, 0);
     }
 }
