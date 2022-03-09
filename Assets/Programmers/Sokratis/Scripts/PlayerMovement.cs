@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _velocity.z = Input.GetAxis("Horizontal");
-        _velocity.x = Input.GetAxis("Vertical");
+        _velocity.z = Input.GetAxis("Vertical");
+        _velocity.x = Input.GetAxis("Horizontal");
 
         _navMeshAgent.velocity = _velocity * 50;
     }
