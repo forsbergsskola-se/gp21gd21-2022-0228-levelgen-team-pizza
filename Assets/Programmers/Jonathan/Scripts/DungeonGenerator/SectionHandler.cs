@@ -8,6 +8,8 @@ public class SectionHandler : MonoBehaviour
     [HideInInspector]
     public Vector2 SectionCoords;
 
+    public bool hasANavmesh;
+
     [SerializeField]
     private float roomDestroyDistance = 250f; // Distance from pivot until rooms are destroyed
 
@@ -25,6 +27,5 @@ public class SectionHandler : MonoBehaviour
     private void OnDestroy()
     {
         dungeonGenerator.occupiedSpots.Remove(SectionCoords);
-
     }
 }
