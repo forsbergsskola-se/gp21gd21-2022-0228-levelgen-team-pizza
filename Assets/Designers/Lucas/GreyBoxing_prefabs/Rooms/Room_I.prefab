@@ -46,6 +46,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 992793dbc7eedae44953417a1e4dda10, type: 2}
   radius: 5
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &4332901519462716877
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +94,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &4506687813412245094
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +142,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 992793dbc7eedae44953417a1e4dda10, type: 2}
   radius: 5
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &8041216097996719780
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +190,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &8577725543929780772
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +238,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1 &8793226554997385686
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +286,8 @@ MonoBehaviour:
   weightedGoTable: {fileID: 11400000, guid: 6578206d0100d994c959e73c1a28306f, type: 2}
   radius: 1
   numberOfGameObjects: 1
+  maxSpawnAttemptsPerObstacle: 10
+  obstacleCheckRadius: 1
 --- !u!1001 &656659763561473874
 PrefabInstance:
   m_ObjectHideFlags: 0
