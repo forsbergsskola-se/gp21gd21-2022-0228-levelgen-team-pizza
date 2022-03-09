@@ -7,14 +7,18 @@ public class DungeonGenerator : MonoBehaviour
     [SerializeField]
     private GameObject startSection;
 
+    // [SerializeField]
+    // private List<GameObject> upSections = new List<GameObject>();
+    // [SerializeField]
+    // private List<GameObject> downSections = new List<GameObject>();
+    // [SerializeField]
+    // private List<GameObject> leftSections = new List<GameObject>();
+    // [SerializeField]
+    // private List<GameObject> rightSections = new List<GameObject>();
+
     [SerializeField]
-    private List<GameObject> upSections = new List<GameObject>();
-    [SerializeField]
-    private List<GameObject> downSections = new List<GameObject>();
-    [SerializeField]
-    private List<GameObject> leftSections = new List<GameObject>();
-    [SerializeField]
-    private List<GameObject> rightSections = new List<GameObject>();
+    private WeightedGOTable sectionTable;
+
     public Vector2 offset;
 
     private int[] sectionRotation = {
@@ -41,10 +45,9 @@ public class DungeonGenerator : MonoBehaviour
         {
             if (!occupiedSpots.Contains(new Vector2(sectionCoords.x, sectionCoords.y + 1))) // if there is no room in the next spot to spawn in
             {
-                Debug.Log(sectionCoords);
-
                 //spawn room
-                var section = Instantiate(downSections[Random.Range(0,downSections.Count)], new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y + 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                // var section = Instantiate(downSections[Random.Range(0,downSections.Count)], new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y + 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                var section = Instantiate(sectionTable.PickGO(), new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y + 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 SetRandomRotationOfSection(section);
                 //update room cords on room
                 section.SectionCoords = new Vector2(sectionCoords.x, sectionCoords.y + 1);
@@ -57,7 +60,8 @@ public class DungeonGenerator : MonoBehaviour
         {
             if (!occupiedSpots.Contains(new Vector2(sectionCoords.x, sectionCoords.y - 1)))
             {
-                var section = Instantiate(upSections[Random.Range(0,upSections.Count)], new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y - 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                var section = Instantiate(sectionTable.PickGO(), new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y - 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                // var section = Instantiate(upSections[Random.Range(0,upSections.Count)], new Vector3(sectionCoords.x*offset.x, 0, -(sectionCoords.y - 1)*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 SetRandomRotationOfSection(section);
 
                 section.SectionCoords = new Vector2(sectionCoords.x, sectionCoords.y - 1);
@@ -69,7 +73,8 @@ public class DungeonGenerator : MonoBehaviour
         {
             if (!occupiedSpots.Contains(new Vector2(sectionCoords.x + 1, sectionCoords.y)))
             {
-                var section = Instantiate(rightSections[Random.Range(0,rightSections.Count)], new Vector3((sectionCoords.x + 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                var section = Instantiate(sectionTable.PickGO(), new Vector3((sectionCoords.x + 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                // var section = Instantiate(rightSections[Random.Range(0,rightSections.Count)], new Vector3((sectionCoords.x + 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 SetRandomRotationOfSection(section);
 
                 section.SectionCoords = new Vector2(sectionCoords.x + 1, sectionCoords.y);
@@ -81,7 +86,8 @@ public class DungeonGenerator : MonoBehaviour
         {
             if (!occupiedSpots.Contains(new Vector2(sectionCoords.x - 1, sectionCoords.y)))
             {
-                var section = Instantiate(leftSections[Random.Range(0,leftSections.Count)], new Vector3((sectionCoords.x - 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                var section = Instantiate(sectionTable.PickGO(), new Vector3((sectionCoords.x - 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
+                // var section = Instantiate(leftSections[Random.Range(0,leftSections.Count)], new Vector3((sectionCoords.x - 1)*offset.x, 0, -sectionCoords.y*offset.y), Quaternion.identity).GetComponent<SectionHandler>();
                 SetRandomRotationOfSection(section);
 
                 section.SectionCoords = new Vector2(sectionCoords.x - 1, sectionCoords.y);

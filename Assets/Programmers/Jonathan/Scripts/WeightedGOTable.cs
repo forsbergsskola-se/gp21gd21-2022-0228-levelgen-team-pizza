@@ -57,6 +57,10 @@ public class WeightedGOTable : ScriptableObject
         {
             if (pickedNumber > go.ProbabilityRangeFrom && pickedNumber < go.ProbabilityRangeTo)
             {
+                if (go == null)
+                {
+                    Debug.LogError("ERROR: No gameobject set in table slot");
+                }
                 return go.GameObj;
             }
         }
