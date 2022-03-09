@@ -1350,8 +1350,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ccde26215eec4a6aafcad49d71bc8c0, type: 3}
+--- !u!1 &1477244859189575539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5739535089608565541, guid: 5ccde26215eec4a6aafcad49d71bc8c0, type: 3}
+  m_PrefabInstance: {fileID: 6568173082107059286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1477244859189575548 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5739535089608565546, guid: 5ccde26215eec4a6aafcad49d71bc8c0, type: 3}
   m_PrefabInstance: {fileID: 6568173082107059286}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7370607437945029457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477244859189575539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de19ceff50a1654492d32e7bbcaba95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SectionCoords: {x: 0, y: 0}
+  hasANavmesh: 0
+  roomDestroyDistance: 250

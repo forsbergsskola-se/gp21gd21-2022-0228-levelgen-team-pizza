@@ -449,6 +449,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2094802585263771239, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Size.x
+      value: 28.780804
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094802585263771239, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Size.z
+      value: 98.560165
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094802585263771239, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Center.x
+      value: 16.750256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094802585263771239, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Center.z
+      value: -1.1779022
+      objectReference: {fileID: 0}
     - target: {fileID: 2105303900980791151, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -600,6 +616,22 @@ PrefabInstance:
     - target: {fileID: 3088416035714839642, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129740352044922791, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Size.x
+      value: 99.10947
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129740352044922791, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Size.z
+      value: 28.63351
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129740352044922791, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Center.x
+      value: 12.442696
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129740352044922791, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Center.z
+      value: -6.6805973
       objectReference: {fileID: 0}
     - target: {fileID: 3132404928764034792, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
       propertyPath: m_Mesh
@@ -764,6 +796,22 @@ PrefabInstance:
     - target: {fileID: 4024193119483175237, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132626896879853090, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Size.x
+      value: 23.93801
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132626896879853090, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Size.z
+      value: 99.37624
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132626896879853090, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Center.x
+      value: 10.233569
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132626896879853090, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Center.z
+      value: -2.6411781
       objectReference: {fileID: 0}
     - target: {fileID: 4161855205353015932, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1341,6 +1389,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7815865575691508000, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Size.x
+      value: 98.7673
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815865575691508000, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Size.z
+      value: 35.32152
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815865575691508000, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Center.x
+      value: 12.755852
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815865575691508000, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
+      propertyPath: m_Center.z
+      value: 6.6969204
+      objectReference: {fileID: 0}
     - target: {fileID: 7840060091210985207, guid: 2549e306e6514944baab41f91ca26d2c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -1738,4 +1802,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SectionCoords: {x: 0, y: 0}
+  hasANavmesh: 0
   roomDestroyDistance: 250
