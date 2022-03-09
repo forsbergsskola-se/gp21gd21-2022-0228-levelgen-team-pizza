@@ -1,21 +1,21 @@
 using UnityEngine;
 
-public class EnemyspawnerJJ : MonoBehaviour
+public class WeightedGameObjectSpawnerJJ : MonoBehaviour
 {
     [SerializeField]
-    private WeightedGOTable enemyTable;
+    private WeightedGOTable weightedGoTable;
 
     [SerializeField]
     private float radius;
 
     [SerializeField]
-    private int numberOfEnemies;
+    private int numberOfGameObjects;
 
     private void Start()
     {
-        for (var i = 0; i < numberOfEnemies; i++)
+        for (var i = 0; i < numberOfGameObjects; i++)
         {
-            SpawnEnemy();
+            SpawnGameObject();
         }
     }
 
@@ -25,11 +25,11 @@ public class EnemyspawnerJJ : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-    private void SpawnEnemy()
+    private void SpawnGameObject()
     {
         var randomSpawnPos = transform.position + Random.insideUnitSphere*radius;
         var corrPos = new Vector3(randomSpawnPos.x, transform.position.y, randomSpawnPos.z);
-        var enemy = Instantiate(enemyTable.PickGO(), corrPos, Quaternion.identity);
-        enemy.transform.parent = transform;
+        var go = Instantiate(weightedGoTable.PickGO(), corrPos, Quaternion.identity);
+        go.transform.parent = transform;
     }
 }
