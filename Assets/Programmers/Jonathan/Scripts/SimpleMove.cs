@@ -7,6 +7,7 @@ public class SimpleMove : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float rotationSpeed;
+    [SerializeField] private Animator animator;
 
     Rigidbody rb;
 
@@ -22,5 +23,16 @@ public class SimpleMove : MonoBehaviour
 
         rb.velocity = (transform.forward * mv) * speed * Time.deltaTime;
         transform.Rotate((transform.up * mh) * rotationSpeed * Time.deltaTime);
+
+        if (mv >= -1)
+        {
+           animator.SetTrigger("Walking");
+        }
+
+        if (mv == 0)
+        {
+            animator.SetTrigger("Idle");
+        }
     }
+
 }
