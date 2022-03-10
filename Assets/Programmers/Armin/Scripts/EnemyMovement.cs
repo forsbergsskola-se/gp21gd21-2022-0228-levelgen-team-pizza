@@ -33,14 +33,7 @@ public class EnemyMovement : MonoBehaviour
             Debug.Log("We are hitting " + hit.point);
         }
 
-        if (noObstacle)
-        {
-            direction = playerPosition.position - transform.position;
-        }
-        else
-        {
-            direction = lastPlayerSeen - transform.position;
-        }
+        direction = SetDirection();
 
         if ((Physics.CheckSphere(transform.position, sphereRadius, PlayerLayer)))
         {
@@ -50,6 +43,21 @@ public class EnemyMovement : MonoBehaviour
             MoveCharacter(movement);
         }
 
+    }
+
+    private Vector3 SetDirection()
+    {
+        Vector3 direction;
+        if (noObstacle)
+        {
+            direction = playerPosition.position - transform.position;
+        }
+        else
+        {
+            direction = lastPlayerSeen - transform.position;
+        }
+
+        return direction;
     }
 
     void MoveCharacter(Vector3 direction)
