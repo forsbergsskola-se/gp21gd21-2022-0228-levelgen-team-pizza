@@ -31,6 +31,7 @@ public class PlayerHealth_PS : MonoBehaviour{
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            ScoreScriptMT.scoreValue = 0;
         }
     }
 
