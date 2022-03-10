@@ -6,34 +6,33 @@ using UnityEngine;
 public class DestroyOnClick : MonoBehaviour
 {
     [SerializeField] private float range = 10f;
-    private Transform player;
-    private float distanceToPlayer;
-    private bool noObstacle;
+    private Transform m_Player;
+    private float m_DistanceToPlayer;
+    private bool m_NoObstacle;
 
     private void Awake()
     {
-        player = GameObject.FindObjectOfType<SimpleMove>().transform;
+        m_Player = GameObject.FindObjectOfType<SimpleMove>().transform;
     }
 
     private void Update()
     {
-        distanceToPlayer =  Vector3.Distance(transform.position, player.position);
+        m_DistanceToPlayer =  Vector3.Distance(transform.position, m_Player.position);
 
-        Vector3 direction = player.position - this.transform.position;
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, direction, out hit))
+        Vector3 direction = m_Player.position - this.transform.position;
+        if (Physics.Raycast(transform.position, direction, out var hit))
         {
-            noObstacle = hit.transform.CompareTag("Player");
+            m_NoObstacle = hit.transform.CompareTag("Player");
         }
 
     }
 
     private void OnMouseDown()
     {
-        if (distanceToPlayer <= range && noObstacle)
+        if (m_DistanceToPlayer <= range && m_NoObstacle)
         {
-
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+
     }
 }
