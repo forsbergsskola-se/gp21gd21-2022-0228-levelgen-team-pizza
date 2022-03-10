@@ -26,12 +26,16 @@ public class SimpleMove : MonoBehaviour
 
         if (mv >= -1)
         {
-           animator.SetTrigger("Walking");
+            animator.SetBool("Idle", false);
+           animator.SetBool("Walking", true);
+
         }
 
         if (mv == 0)
         {
-            animator.SetTrigger("Idle");
+            animator.SetBool("Walking", false);
+            animator.SetBool("Idle", true);
+
         }
     }
 
