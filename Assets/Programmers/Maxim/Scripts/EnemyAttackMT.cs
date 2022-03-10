@@ -14,7 +14,7 @@ public class EnemyAttackMT : MonoBehaviour
         if (collisionInfo.gameObject.CompareTag("Player"))
         {
             //Damage them
-            gameObject.GetComponent<PlayerHealth_PS>().PlayerTakeDamage(damage);
+            collisionInfo.gameObject.GetComponent<PlayerHealth_PS>().PlayerTakeDamage(damage);
 
         }
     }
