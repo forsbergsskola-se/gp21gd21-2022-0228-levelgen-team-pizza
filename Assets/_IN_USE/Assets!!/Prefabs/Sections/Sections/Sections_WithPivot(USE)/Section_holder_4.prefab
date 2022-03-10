@@ -129,6 +129,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 612558605845445359, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 628633568831419508, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -240,6 +244,10 @@ PrefabInstance:
     - target: {fileID: 1540683034804062165, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553100876092156237, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1608199546242514082, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
       propertyPath: m_Mesh
@@ -548,6 +556,10 @@ PrefabInstance:
     - target: {fileID: 4938769081875709657, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970220440027195374, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4992467680053427477, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
       propertyPath: m_IsActive
@@ -948,6 +960,10 @@ PrefabInstance:
     - target: {fileID: 8599363670310628484, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694285054247787035, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8738999170091055758, guid: 724e1923450d0f245bc255f4a155fda3, type: 3}
       propertyPath: m_Mesh
