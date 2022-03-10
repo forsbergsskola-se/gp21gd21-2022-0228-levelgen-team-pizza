@@ -29,8 +29,10 @@ public class DestroyOnClick : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (m_DistanceToPlayer <= range && m_NoObstacle)
+        Debug.Log("We are hitting " + Input.GetMouseButtonDown(0));
+        if (m_DistanceToPlayer <= range)
         {
+            ;
             Destroy(gameObject);
         }
 

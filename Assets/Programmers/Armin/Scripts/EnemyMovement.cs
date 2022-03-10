@@ -30,7 +30,6 @@ public class EnemyMovement : MonoBehaviour
         {
             noObstacle = hit.transform.CompareTag("Player");
             lastPlayerSeen = hit.transform.position;
-            Debug.Log("We are hitting " + hit.point);
         }
 
         direction = SetDirection();
