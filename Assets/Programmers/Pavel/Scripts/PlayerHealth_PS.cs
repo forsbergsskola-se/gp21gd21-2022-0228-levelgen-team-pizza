@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth_PS : MonoBehaviour{
     [SerializeField] int maxHealth = 100;
     [SerializeField] int currentHealth;
+    [SerializeField] private int potionHeal = 10;
 
     public PlayerHealthBarMT PlayerHealthBarMT;
 
@@ -30,6 +31,15 @@ public class PlayerHealth_PS : MonoBehaviour{
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Potion"))
+        {
+            currentHealth += 10;
+            PlayerHealthBarMT.SetHealth(currentHealth);
         }
     }
 }
