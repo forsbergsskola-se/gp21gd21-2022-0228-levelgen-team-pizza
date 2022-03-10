@@ -11,9 +11,9 @@ public class EnemyHealth_PS : MonoBehaviour{
         currentHealth -= Damage;
 
         if (currentHealth <= 0 && isEnemyDead == false){
-            Debug.Log("Dead:" + currentHealth);
             //gameObject.GetComponent<Animator>().Play();
             isEnemyDead = true;
+            Destroy(gameObject);
         }
     }
 }

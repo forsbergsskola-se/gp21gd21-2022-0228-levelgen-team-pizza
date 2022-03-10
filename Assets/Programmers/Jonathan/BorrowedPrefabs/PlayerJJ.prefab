@@ -161,7 +161,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5914055282148161603}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 300
   m_Drag: 10
   m_AngularDrag: 10
   m_UseGravity: 1
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3182158be1cd1449ae8db99f1c7ca6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 650
+  speed: 800
   rotationSpeed: 80
   animator: {fileID: 2226833737938088091}
 --- !u!114 &100940330070552301
@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+  PlayerHealthBarMT: {fileID: 0}
 --- !u!1001 &2284493756977076565
 PrefabInstance:
   m_ObjectHideFlags: 0
