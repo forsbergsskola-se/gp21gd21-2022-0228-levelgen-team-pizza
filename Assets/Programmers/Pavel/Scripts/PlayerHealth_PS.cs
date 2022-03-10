@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerHealth_PS : MonoBehaviour{
     [SerializeField] int maxHealth = 100;
     [SerializeField] int currentHealth;
@@ -13,5 +13,13 @@ public class PlayerHealth_PS : MonoBehaviour{
 
     public void PlayerTakeDamage(int Damage){
         currentHealth -= Damage;
+    }
+
+    public void ReloadOnDeath(int Damage)
+    {
+        if (currentHealth == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
