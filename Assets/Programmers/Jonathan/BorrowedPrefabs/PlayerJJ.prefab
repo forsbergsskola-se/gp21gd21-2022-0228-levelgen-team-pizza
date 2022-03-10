@@ -129,6 +129,8 @@ GameObject:
   - component: {fileID: 7249008820660530410}
   - component: {fileID: 2426664217757540387}
   - component: {fileID: 7574516239350625302}
+  - component: {fileID: 100940330070552301}
+  - component: {fileID: 2226196195686640091}
   m_Layer: 6
   m_Name: PlayerJJ
   m_TagString: Player
@@ -177,10 +179,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3072609
-  m_Height: 1.882848
+  m_Radius: 0.7565346
+  m_Height: 3.8582668
   m_Direction: 1
-  m_Center: {x: 0, y: 0.98, z: 0}
+  m_Center: {x: -0.104515076, y: 1.9677095, z: 0}
 --- !u!114 &7574516239350625302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +197,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 650
   rotationSpeed: 80
+  animator: {fileID: 2226833737938088091}
+--- !u!114 &100940330070552301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914055282148161603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3da807aea6357478f4862aa7c3d69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+--- !u!114 &2226196195686640091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914055282148161603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac853075b5ef6142b0fd6b60f24b6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
 --- !u!1001 &2284493756977076565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,5 +302,10 @@ PrefabInstance:
 --- !u!4 &2286699595415123371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4463868907105534, guid: ccd8c3b89aa02e943a08ab9238a8a70c, type: 3}
+  m_PrefabInstance: {fileID: 2284493756977076565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2226833737938088091 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95538263452871118, guid: ccd8c3b89aa02e943a08ab9238a8a70c, type: 3}
   m_PrefabInstance: {fileID: 2284493756977076565}
   m_PrefabAsset: {fileID: 0}
