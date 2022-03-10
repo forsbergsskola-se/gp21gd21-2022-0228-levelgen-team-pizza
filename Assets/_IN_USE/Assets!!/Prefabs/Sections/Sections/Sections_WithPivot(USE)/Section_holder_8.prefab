@@ -1327,7 +1327,8 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6207963613596370899, guid: 04d80afd2621e475f96a44aa7fea4783, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 04d80afd2621e475f96a44aa7fea4783, type: 3}
 --- !u!1001 &3233467710964990108
 PrefabInstance:
@@ -1386,8 +1387,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ccde26215eec4a6aafcad49d71bc8c0, type: 3}
+--- !u!1 &7167893328493650873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5739535089608565541, guid: 5ccde26215eec4a6aafcad49d71bc8c0, type: 3}
+  m_PrefabInstance: {fileID: 3233467710964990108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7167893328493650870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5739535089608565546, guid: 5ccde26215eec4a6aafcad49d71bc8c0, type: 3}
   m_PrefabInstance: {fileID: 3233467710964990108}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2432343466039022867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7167893328493650873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de19ceff50a1654492d32e7bbcaba95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SectionCoords: {x: 0, y: 0}
+  hasANavmesh: 0
+  roomDestroyDistance: 250
