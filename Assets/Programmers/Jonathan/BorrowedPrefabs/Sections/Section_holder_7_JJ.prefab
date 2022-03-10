@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SectionCoords: {x: 0, y: 0}
+  hasANavmesh: 0
   roomDestroyDistance: 250
 --- !u!1001 &3792100212257428755
 PrefabInstance:
@@ -151,6 +152,10 @@ PrefabInstance:
     - target: {fileID: 649760164559006058, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 651374337913467565, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 683411106779387174, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
       propertyPath: m_Mesh
@@ -307,6 +312,10 @@ PrefabInstance:
     - target: {fileID: 2274719786492307840, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278576731658072647, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2301042758610343372, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
       propertyPath: m_Mesh
@@ -592,6 +601,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5311869853758788527, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5316040007090271268, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -779,6 +792,10 @@ PrefabInstance:
     - target: {fileID: 7341833507250481629, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343040935770832376, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7360726972949167325, guid: 838094f00fb8c4ea6a62e8b789817321, type: 3}
       propertyPath: m_Mesh
