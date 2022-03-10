@@ -1845,8 +1845,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100108}
   serializedVersion: 2
-  m_Mass: 400
-  m_Drag: 20
+  m_Mass: 60
+  m_Drag: 10
   m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1909,5 +1909,5 @@ MonoBehaviour:
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 33
+  moveSpeed: 15
   sphereRadius: 15
