@@ -16,14 +16,17 @@ public class PlayerAttackMT : MonoBehaviour
     [SerializeField] int damage = 10;
 
 
-
+    private void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
 
     private void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.gameObject.CompareTag("Enemy"))
         {
             //Damage them
-            gameObject.GetComponent<EnemyHealth_PS>().TakeDamage(damage);
+            collisionInfo.gameObject.GetComponent<EnemyHealth_PS>().TakeDamage(damage);
 
             //Play Animation
             animator.SetTrigger("Attack");
