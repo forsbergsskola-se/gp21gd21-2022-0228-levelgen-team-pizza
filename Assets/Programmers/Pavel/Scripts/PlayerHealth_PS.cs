@@ -16,20 +16,21 @@ public class PlayerHealth_PS : MonoBehaviour{
         playerHealthBarMT.SetMaxHealth(maxHealth);
     }
 
+    private void Update()
+    {
+        ReloadOnDeath();
+    }
+
     public void PlayerTakeDamage(int Damage){
         currentHealth -= Damage;
         playerHealthBarMT.SetHealth(currentHealth);
     }
 
-    public void ReloadOnDeath(int Damage)
+    public void ReloadOnDeath()
     {
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
-}
-
-public class HealthBar
-{
 }
