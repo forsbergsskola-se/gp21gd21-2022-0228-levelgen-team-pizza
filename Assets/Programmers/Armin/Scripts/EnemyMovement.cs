@@ -29,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
         if (Physics.Raycast(transform.position, direction, out hit))
         {
             noObstacle = hit.transform.CompareTag("Player");
-            lastPlayerSeen = hit.point;
+            lastPlayerSeen = hit.transform.position;
             Debug.Log("We are hitting " + hit.point);
         }
 
@@ -42,7 +42,7 @@ public class EnemyMovement : MonoBehaviour
             direction = lastPlayerSeen - transform.position;
         }
 
-        if ((Physics.CheckSphere(transform.position, sphereRadius, PlayerLayer)) && noObstacle)
+        if ((Physics.CheckSphere(transform.position, sphereRadius, PlayerLayer)))
         {
             direction.Normalize();
             movement = direction;

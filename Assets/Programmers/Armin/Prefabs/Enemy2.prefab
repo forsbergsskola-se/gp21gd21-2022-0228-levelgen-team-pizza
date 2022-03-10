@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7418351345578779650}
   - component: {fileID: -625970096583648546}
   - component: {fileID: 1162264984693861299}
-  - component: {fileID: 8988312979876500785}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -128,23 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerLayer:
     serializedVersion: 2
-    m_Bits: 32768
-  moveSpeed: 15
-  sphereRadius: 20
---- !u!114 &8988312979876500785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7755834980369746418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e511ad05f65dbc45b61d68c9189c89d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerLayer:
-    serializedVersion: 2
-    m_Bits: 32768
+    m_Bits: 64
   moveSpeed: 15
   sphereRadius: 20
