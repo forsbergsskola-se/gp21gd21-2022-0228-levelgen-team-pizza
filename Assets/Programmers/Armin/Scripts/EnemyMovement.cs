@@ -36,6 +36,7 @@ public class EnemyMovement : MonoBehaviour
 
         if ((Physics.CheckSphere(transform.position, sphereRadius, PlayerLayer)))
         {
+            transform.LookAt(playerPosition);
             direction.Normalize();
             movement = direction;
 
