@@ -32,7 +32,7 @@ public class EnemyMovement : MonoBehaviour
             lastPlayerSeen = hit.transform.position;
         }
 
-        direction = SetDirection();
+        direction =  playerPosition.position - transform.position;
 
         if ((Physics.CheckSphere(transform.position, sphereRadius, PlayerLayer)))
         {
