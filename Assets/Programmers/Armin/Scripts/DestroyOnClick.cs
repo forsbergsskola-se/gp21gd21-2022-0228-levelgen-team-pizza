@@ -32,7 +32,6 @@ public class DestroyOnClick : MonoBehaviour
         Debug.Log("We are hitting " + Input.GetMouseButtonDown(0));
         if (m_DistanceToPlayer <= range)
         {
-            ;
             Destroy(gameObject);
         }
 

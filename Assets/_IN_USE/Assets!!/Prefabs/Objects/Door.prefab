@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1425748681302637944}
+  - component: {fileID: 6034665867377974015}
   m_Layer: 0
   m_Name: door-lp
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 3797203010360591931}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6034665867377974015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766139427546343362}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2755537, y: 1, z: 0.21895854}
+  m_Center: {x: -0.0022581294, y: 0, z: 0.5960579}
 --- !u!1 &3424216901883172058
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,6 +56,7 @@ GameObject:
   - component: {fileID: 3797203010360591931}
   - component: {fileID: 7600893544652368057}
   - component: {fileID: 3966849807657931128}
+  - component: {fileID: 2596165609678228076}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -73,12 +88,25 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3424216901883172058}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2716829, y: 2.4663618, z: 0.1737922}
-  m_Center: {x: 0.13584158, y: -0.37841558, z: -0.022074696}
+  m_Size: {x: 1.2716829, y: 2.4663618, z: 1.5567182}
+  m_Center: {x: 0.13584161, y: -0.37841558, z: -0.008091609}
 --- !u!114 &3966849807657931128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3424216901883172058}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6115c0e0046a840b5d7a0263552667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+--- !u!114 &2596165609678228076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,10 +115,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3424216901883172058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6115c0e0046a840b5d7a0263552667, type: 3}
+  m_Script: {fileID: 11500000, guid: 88b010d69bf387e41be022773fb8fd74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
 --- !u!1 &6375493237869704998
 GameObject:
   m_ObjectHideFlags: 0
