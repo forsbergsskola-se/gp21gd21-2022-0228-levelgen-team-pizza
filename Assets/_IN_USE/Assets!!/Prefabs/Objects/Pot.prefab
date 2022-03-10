@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4388665378222981068}
   - component: {fileID: 6727511110664065405}
   - component: {fileID: 6370405589176289010}
-  - component: {fileID: -3618752059935540441}
+  - component: {fileID: 4623017497739480694}
   m_Layer: 6
   m_Name: Pot
   m_TagString: Untagged
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.573169, y: 1.7050593, z: 2.3699942}
   m_Center: {x: -0.00072851777, y: 0.84555674, z: 0.00000011920929}
---- !u!114 &-3618752059935540441
+--- !u!114 &4623017497739480694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
