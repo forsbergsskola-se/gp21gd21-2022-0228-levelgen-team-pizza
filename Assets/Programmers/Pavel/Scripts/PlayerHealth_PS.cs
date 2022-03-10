@@ -7,8 +7,12 @@ public class PlayerHealth_PS : MonoBehaviour{
     [SerializeField] int maxHealth = 100;
     [SerializeField] int currentHealth;
 
+    public PlayerHealthBarMT PlayerHealthBarMT;
+
     void Start(){
         currentHealth = maxHealth;
+        PlayerHealthBarMT.SetHealth(maxHealth);
+
     }
 
     private void Update()
@@ -18,6 +22,7 @@ public class PlayerHealth_PS : MonoBehaviour{
 
     public void PlayerTakeDamage(int Damage){
         currentHealth -= Damage;
+        PlayerHealthBarMT.SetHealth(currentHealth);
     }
 
     public void ReloadOnDeath()
