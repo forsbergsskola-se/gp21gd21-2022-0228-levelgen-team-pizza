@@ -11,13 +11,18 @@ public class PlayerHealth_PS : MonoBehaviour{
         currentHealth = maxHealth;
     }
 
+    private void Update()
+    {
+        ReloadOnDeath();
+    }
+
     public void PlayerTakeDamage(int Damage){
         currentHealth -= Damage;
     }
 
-    public void ReloadOnDeath(int Damage)
+    public void ReloadOnDeath()
     {
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
