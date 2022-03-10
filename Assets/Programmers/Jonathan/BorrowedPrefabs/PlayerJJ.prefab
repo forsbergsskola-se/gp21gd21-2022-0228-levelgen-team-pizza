@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+  potionHeal: 40
   PlayerHealthBarMT: {fileID: 0}
 --- !u!1001 &2284493756977076565
 PrefabInstance:
