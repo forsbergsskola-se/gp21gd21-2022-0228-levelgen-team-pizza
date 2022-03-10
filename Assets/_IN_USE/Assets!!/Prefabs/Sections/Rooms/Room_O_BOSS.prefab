@@ -4070,11 +4070,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232131345651031809, guid: 672bd4b5ab00e40ee85820564aaf492a, type: 3}
       propertyPath: m_SelectedEdges.Array.size
-      value: 56
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232131345651031809, guid: 672bd4b5ab00e40ee85820564aaf492a, type: 3}
       propertyPath: m_SelectedFaces.Array.size
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232131345651031809, guid: 672bd4b5ab00e40ee85820564aaf492a, type: 3}
       propertyPath: m_SelectedFaces.Array.data[9]
@@ -4082,7 +4082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232131345651031809, guid: 672bd4b5ab00e40ee85820564aaf492a, type: 3}
       propertyPath: m_SelectedVertices.Array.size
-      value: 56
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232131345651031809, guid: 672bd4b5ab00e40ee85820564aaf492a, type: 3}
       propertyPath: m_SelectedFaces.Array.data[10]
@@ -4666,7 +4666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232131345651031809, guid: 672bd4b5ab00e40ee85820564aaf492a, type: 3}
       propertyPath: m_Faces.Array.data[0].m_SubmeshIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232131345651031809, guid: 672bd4b5ab00e40ee85820564aaf492a, type: 3}
       propertyPath: m_Faces.Array.data[2].m_SubmeshIndex
