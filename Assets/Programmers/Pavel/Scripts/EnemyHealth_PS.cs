@@ -14,6 +14,7 @@ public class EnemyHealth_PS : MonoBehaviour{
             //gameObject.GetComponent<Animator>().Play();
             isEnemyDead = true;
             Destroy(gameObject);
+            ScoreScriptMT.scoreValue += 10;
         }
     }
 }
