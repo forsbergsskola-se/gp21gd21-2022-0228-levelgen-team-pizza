@@ -39,7 +39,7 @@ public class PlayerHealth_PS : MonoBehaviour{
     {
         if (collision.gameObject.CompareTag("Potion"))
         {
-            currentHealth += 10;
+            currentHealth += potionHeal;
             PlayerHealthBarMT.SetHealth(currentHealth);
         }
     }
