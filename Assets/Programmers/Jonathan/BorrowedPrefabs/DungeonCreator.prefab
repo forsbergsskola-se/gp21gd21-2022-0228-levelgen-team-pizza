@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d7f5820eca2a4948afcfb23ea064d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSection: {fileID: 3287642695825475647, guid: 75515dbbbe23aca438f91d18d8a6e300, type: 3}
-  sectionTable: {fileID: 11400000, guid: 0cb2f98fd9d1f5a4a8e17f6a06a906b0, type: 2}
+  startSection: {fileID: 3287642695825475647, guid: 40a25b658a9fe4379bbdb8bc8849df08, type: 3}
+  sectionTable: {fileID: 11400000, guid: 902857670631840a8a93bc4c78da7661, type: 2}
   offset: {x: 100.8, y: 100.8}
   occupiedSpots: []
